@@ -9,5 +9,4 @@ Spec:
       port: 80
       nodeport: 30008
   selector: 
-        app: httpd 
-        tier: web-app
+        app: myapp

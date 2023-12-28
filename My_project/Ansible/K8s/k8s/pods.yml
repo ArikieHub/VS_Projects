@@ -1,11 +1,10 @@
-apiVersion: V1
-kind: pods 
+apiVersion: v1
+kind: Pod
 metadata:
-     name: app-httpd
-     labels:
-        app: httpd 
-        tier: web-app
+   name: web-app
+   labels:
+      app: myapp
 spec:
-  container:
-     - name: httpd
-       image: httpd 
+  containers: 
+    - name: httpd
+      image: httpd

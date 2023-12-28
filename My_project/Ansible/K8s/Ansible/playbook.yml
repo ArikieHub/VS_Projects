@@ -1,7 +1,11 @@
 ---
-  -name: ping
-   host: all
-   tasks:
-      -name: ping the server
-       ping:
-       
+  - name: ping
+    hosts: all
+    tasks:
+      - name: ping the server
+          ping:
+      - name: install httpd 
+         yum:
+             name: httpd 
+             state: present 
+
