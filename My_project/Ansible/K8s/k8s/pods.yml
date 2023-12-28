@@ -4,7 +4,7 @@ metadata:
      name: app-httpd
      labels:
         app: httpd 
-        type: web-app
+        tier: web-app
 spec:
   container:
      - name: httpd
