@@ -1,0 +1,27 @@
+apiVersion: app/v1
+kind: Replicaset
+metadata:
+   name: my-app
+   labels:
+      app: my-app
+Spec:
+   template:
+      metadata:
+         name: web-app
+         labels:
+           app: myapp
+      spec:
+         containers: 
+            - name: httpd
+              image: httpd
+   replicas: 3
+   selector:
+      matchlabels:
+          app: myapp
+
+
+# kubectl create -f replicaset.yml
+# kubectl get replicaset 
+# kubectl delete replicaset replicaset.yml
+# kubectl update -f replicaset.yml 
+# kubectl scale --replicas=6 -f replicaset.yml

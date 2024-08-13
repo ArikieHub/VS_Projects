@@ -12,11 +12,15 @@ Spec:
           app: myapp
      spec:
        containers: 
-          - name: httpd
-            image: httpd
+          - name: tomcat
+            image: tomcat:latest
   replicas: 3
   selector:
      matchLabels:
         app: httpd 
         tier: web-app
         
+
+# kubectl create -f Deployment.yml
+# kubectl get deployment
+# kubectl get all

@@ -10,3 +10,6 @@ Spec:
       nodeport: 30008
   selector: 
         app: myapp
+
+# kubectl create -f Service-definition.yml
+# kubectl get services
